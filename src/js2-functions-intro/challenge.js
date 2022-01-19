@@ -17,7 +17,7 @@
  * @returns {string} John Smith
  */
 export const createFullName = (firstName, lastName) => {
-  /* Write your code here */
+  return firstName + " " + lastName;
 };
 
 /**
@@ -28,8 +28,12 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (/* Write the parameters here */) => {
-  /* Write your code here */
+export const findSmallestNumber = (number1, number2) => {
+  if (number1 < number2) {
+    return number1;
+  } else {
+    return number2;
+  }
 };
 
 /**
@@ -40,8 +44,9 @@ export const findSmallestNumber = (/* Write the parameters here */) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (/* Write the parameters here */) => {
-  /* Write your code here */
+export const multiplyNumbers = (firstNumber, secondNumber) => {
+  const productScore = firstNumber * secondNumber;
+  return productScore;
 };
 
 /* Intermediate Challenges */
@@ -57,7 +62,13 @@ export const multiplyNumbers = (/* Write the parameters here */) => {
  * @returns {string} "You got a new high score!" | "So close!" | "Better luck next time!"
  */
 export const checkIfNewHighScore = (score, highScore) => {
-  /* Write your code here */
+  if (score > highScore) {
+    return "You got a new high score!";
+  } else if (score === highScore) {
+    return "So close!";
+  } else {
+    return "Better luck next time!";
+  }
 };
 
 /**
@@ -67,7 +78,9 @@ export const checkIfNewHighScore = (score, highScore) => {
  * @returns {string} "15 degrees celsius is 59 degrees fahrenheit"
  */
 export const celsiusToFahrenheit = (tempInCelsius) => {
-  /* Write your code here */
+ 
+  let convertToFahrenheit = (tempInCelsius * 9)/5 + 32; 
+  return `${tempInCelsius} degrees celsius is ${convertToFahrenheit} degrees fahrenheit`;
 };
 
 /**
@@ -80,7 +93,11 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  * @returns {number} 47450
  */
 export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
-  /* Write your code here */
+  let snickersPerYear = snickersPerDay * 365;
+  let numberOfAccumulatedYears = maxAge - age;
+
+  let lifeSupply = snickersPerYear * numberOfAccumulatedYears;
+  return lifeSupply;
 };
 
 /* Advanced Challenges */
