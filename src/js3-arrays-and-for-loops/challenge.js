@@ -21,8 +21,10 @@
  * @return {string} "Bacon+Lettuce+Tomato"
  */
 
+
 export const createRecipeString = (ingredientsArr) => {
-  return;
+const recipeString = ingredientsArr.join("+");
+return recipeString;
 };
 
 /**
@@ -33,7 +35,11 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+let createNewList = [];
+
+createNewList.push(itemsArr[0]);
+createNewList.push(itemsArr[itemsArr.length-1]);
+return createNewList;
 };
 
 /**
@@ -44,7 +50,13 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+  let totalScore = 0;
+
+  for (let i = 0; i < scoreArr.length; i ++) {
+    totalScore = scoreArr[i] + totalScore;
+  }
+
+  return totalScore;
 };
 
 /**
@@ -60,7 +72,14 @@ export const totalScores = (scoreArr) => {
  */
 
 export const totalRange = (rangeMax) => {
-  return;
+   
+
+  let totalSumOfRange = 0;
+
+  for (let i = 0; i <= rangeMax; i++) {
+    totalSumOfRange = i + totalSumOfRange;  
+  }
+  return totalSumOfRange;
 };
 
 /**
@@ -71,7 +90,12 @@ export const totalRange = (rangeMax) => {
  */
 
 export const moveFirstAndLastItems = (itemsArr) => {
-  return;
+  const newArray = [...itemsArr]
+
+  newArray.unshift(newArray.pop());
+
+
+  return newArray;
 };
 
 /**
